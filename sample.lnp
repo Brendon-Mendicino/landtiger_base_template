@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+".\startup_lpc17xx.o"
+".\sample.o"
+".\core_cm3.o"
+".\system_lpc17xx.o"
+".\irq_timer.o"
+".\lib_timer.o"
+".\asciilib.o"
+".\glcd.o"
+".\irq_rit.o"
+".\lib_rit.o"
+".\funct_led.o"
+".\lib_led.o"
+".\lib_joystick.o"
+".\touchpanel.o"
+".\irq_button.o"
+".\lib_button.o"
+".\irq_adc.o"
+".\lib_adc.o"
+--strict --scatter ".\sample.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\sample.map" -o .\sample.axf
