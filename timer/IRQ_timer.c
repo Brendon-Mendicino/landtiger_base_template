@@ -12,20 +12,41 @@
 #include "../led/led.h"
 
 
+// When updating the MR to the current TC value, there might
+// be some delay, to compensate that a small delay is
+// added to the value of the TC.
+#define MR_UPDATE_DELAY (20)
+
 
 void run_mr(uint8_t timer, uint8_t match, volatile uint32_t *MR, volatile uint32_t *TC)
 {
 	callable_t callable;
 
+	volatile uint32_t TC0 = *MR;
 	*MR += TIMER_get_match_reg_update_val(timer, match);
 
 	if  ((callable = TIMER_get_callable(timer, match)) != NULL) {
 		callable();
 	}
 
+	// If there was no update, there is no need to extend the value of the MR
+	if (TIMER_get_match_reg_update_val(timer, match) == 0) {
+		return;
+	}
+
 	// In case the callback exceded the time
-	if (*MR < *TC) {
-		*MR = *TC + 20;
+	if (*TC > *TC - TC0) {
+		if (*MR < *TC && *MR > *MR - TC0) {
+			*MR = *TC + MR_UPDATE_DELAY;
+		}
+	}
+	else {
+		if (*MR > *TC && *MR > *MR - TC0) {
+			*MR = *TC + MR_UPDATE_DELAY;
+		}
+		else if (*MR < *TC && *MR < *MR - TC0) {
+			*MR = *TC + MR_UPDATE_DELAY;
+		}
 	}
 }
 
