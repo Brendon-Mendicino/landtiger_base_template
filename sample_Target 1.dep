@@ -1,7 +1,7 @@
 Dependencies for Project 'sample', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (.\startup_LPC17xx.s)(0x639A94BC)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (.\sample.c)(0x63BD7D1C)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
+F (.\sample.c)(0x63DA8E27)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -10,20 +10,20 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (defines/defines.h)(0x63C0478D)
+I (defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (GLCD/GLCD.h)(0x639A94BC)
 I (TouchPanel/TouchPanel.h)(0x63B43F35)
 I (timer/timer.h)(0x63BD3755)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
 I (RIT/RIT.h)(0x63BD472D)
-I (button_EXINT/button.h)(0x63C04734)
-I (joystick/joystick.h)(0x63BD4755)
+I (button_EXINT/button.h)(0x63DFE1C2)
+I (joystick/joystick.h)(0x63DFE3CA)
 I (led/led.h)(0x63C046D9)
 I (adc/adc.h)(0x63BDDBD4)
-F (.\core_cm3.c)(0x639A94BA)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
+F (.\core_cm3.c)(0x639A94BA)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
-F (.\system_LPC17xx.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
+F (.\system_LPC17xx.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -32,7 +32,7 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (.\timer\IRQ_timer.c)(0x63C03CDE)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
+F (.\timer\IRQ_timer.c)(0x63DFE71B)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -44,9 +44,9 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Incl
 I (timer\timer.h)(0x63BD3755)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (timer\../defines/defines.h)(0x63C0478D)
+I (timer\../defines/defines.h)(0x63DFE15A)
 I (timer\../led/led.h)(0x63C046D9)
-F (.\timer\lib_timer.c)(0x63C01C85)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
+F (.\timer\lib_timer.c)(0x63DFE802)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -58,13 +58,13 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (timer\timer.h)(0x63BD3755)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
-I (timer\../defines/defines.h)(0x63C0478D)
+I (timer\../defines/defines.h)(0x63DFE15A)
 F (.\timer\timer.h)(0x63BD3755)()
-F (.\GLCD\AsciiLib.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\asciilib.o --omf_browse .\asciilib.crf --depend .\asciilib.d)
+F (.\GLCD\AsciiLib.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\asciilib.o --omf_browse .\asciilib.crf --depend .\asciilib.d)
 I (GLCD\AsciiLib.h)(0x639B2F26)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 F (.\GLCD\AsciiLib.h)(0x639B2F26)()
-F (.\GLCD\GLCD.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
+F (.\GLCD\GLCD.c)(0x639A94BC)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
 I (GLCD\GLCD.h)(0x639A94BC)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -77,7 +77,7 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Incl
 I (GLCD\AsciiLib.h)(0x639B2F26)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 F (.\GLCD\GLCD.h)(0x639A94BC)()
-F (.\RIT\IRQ_RIT.c)(0x63BD4025)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
+F (.\RIT\IRQ_RIT.c)(0x63BD4025)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
@@ -89,9 +89,9 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (RIT\RIT.h)(0x63BD472D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (RIT\../defines/defines.h)(0x63C0478D)
-I (RIT\../joystick/joystick.h)(0x63BD4755)
-F (.\RIT\lib_RIT.c)(0x63BD441F)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_rit.o --omf_browse .\lib_rit.crf --depend .\lib_rit.d)
+I (RIT\../defines/defines.h)(0x63DFE15A)
+I (RIT\../joystick/joystick.h)(0x63DFE3CA)
+F (.\RIT\lib_RIT.c)(0x63DFE5FC)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_rit.o --omf_browse .\lib_rit.crf --depend .\lib_rit.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -102,10 +102,10 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (RIT\RIT.h)(0x63BD472D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (RIT\../defines/defines.h)(0x63C0478D)
+I (RIT\../defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 F (.\RIT\RIT.h)(0x63BD472D)()
-F (.\led\funct_led.c)(0x63C0462B)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\funct_led.o --omf_browse .\funct_led.crf --depend .\funct_led.d)
+F (.\led\funct_led.c)(0x63C0462B)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\funct_led.o --omf_browse .\funct_led.crf --depend .\funct_led.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -116,11 +116,11 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (led\led.h)(0x63C046D9)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
-I (led\../defines/defines.h)(0x63C0478D)
+I (led\../defines/defines.h)(0x63DFE15A)
 I (led\../timer/timer.h)(0x63BD3755)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
 F (.\led\led.h)(0x63C046D9)()
-F (.\led\lib_led.c)(0x639886A5)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_led.o --omf_browse .\lib_led.crf --depend .\lib_led.d)
+F (.\led\lib_led.c)(0x639886A5)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_led.o --omf_browse .\lib_led.crf --depend .\lib_led.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -131,9 +131,9 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (led\led.h)(0x63C046D9)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
-I (led\../defines/defines.h)(0x63C0478D)
-F (.\joystick\joystick.h)(0x63BD4755)()
-F (.\joystick\lib_joystick.c)(0x63BD4702)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
+I (led\../defines/defines.h)(0x63DFE15A)
+F (.\joystick\joystick.h)(0x63DFE3CA)()
+F (.\joystick\lib_joystick.c)(0x63DFE4BD)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -142,11 +142,11 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (joystick\joystick.h)(0x63BD4755)
+I (joystick\joystick.h)(0x63DFE3CA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (joystick\../defines/defines.h)(0x63C0478D)
-F (.\TouchPanel\TouchPanel.c)(0x63B55A0F)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\touchpanel.o --omf_browse .\touchpanel.crf --depend .\touchpanel.d)
+I (joystick\../defines/defines.h)(0x63DFE15A)
+F (.\TouchPanel\TouchPanel.c)(0x63B55A0F)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\touchpanel.o --omf_browse .\touchpanel.crf --depend .\touchpanel.d)
 I (TouchPanel\../GLCD/GLCD.h)(0x639A94BC)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -158,12 +158,12 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (TouchPanel\../TouchPanel/TouchPanel.h)(0x63B43F35)
 F (.\TouchPanel\TouchPanel.h)(0x63B43F35)()
-F (.\button_EXINT\button.h)(0x63C04734)()
-F (.\button_EXINT\IRQ_button.c)(0x63C04827)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_button.o --omf_browse .\irq_button.crf --depend .\irq_button.d)
+F (.\button_EXINT\button.h)(0x63DFE1C2)()
+F (.\button_EXINT\IRQ_button.c)(0x63C04827)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_button.o --omf_browse .\irq_button.crf --depend .\irq_button.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (button_EXINT\button.h)(0x63C04734)
-I (button_EXINT\../defines/defines.h)(0x63C0478D)
+I (button_EXINT\button.h)(0x63DFE1C2)
+I (button_EXINT\../defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -174,11 +174,11 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (button_EXINT\../led/led.h)(0x63C046D9)
 I (button_EXINT\../timer/timer.h)(0x63BD3755)
-F (.\button_EXINT\lib_button.c)(0x63C04868)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_button.o --omf_browse .\lib_button.crf --depend .\lib_button.d)
-I (button_EXINT\button.h)(0x63C04734)
+F (.\button_EXINT\lib_button.c)(0x63DFE2BF)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_button.o --omf_browse .\lib_button.crf --depend .\lib_button.d)
+I (button_EXINT\button.h)(0x63DFE1C2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
-I (button_EXINT\../defines/defines.h)(0x63C0478D)
+I (button_EXINT\../defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -189,9 +189,9 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (button_EXINT\../led/led.h)(0x63C046D9)
 I (button_EXINT\../timer/timer.h)(0x63BD3755)
-F (.\defines\defines.h)(0x63C0478D)()
+F (.\defines\defines.h)(0x63DFE15A)()
 F (.\adc\adc.h)(0x63BDDBD4)()
-F (.\adc\IRQ_adc.c)(0x63BD80FD)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_adc.o --omf_browse .\irq_adc.crf --depend .\irq_adc.d)
+F (.\adc\IRQ_adc.c)(0x63DFDF8E)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_adc.o --omf_browse .\irq_adc.crf --depend .\irq_adc.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -202,11 +202,11 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (adc\adc.h)(0x63BDDBD4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (adc\../defines/defines.h)(0x63C0478D)
+I (adc\../defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)
 I (adc\../led/led.h)(0x63C046D9)
 I (adc\../timer/timer.h)(0x63BD3755)
-F (.\adc\lib_adc.c)(0x63BDDE10)(-c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_adc.o --omf_browse .\lib_adc.crf --depend .\lib_adc.d)
+F (.\adc\lib_adc.c)(0x63BDDE10)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_adc.o --omf_browse .\lib_adc.crf --depend .\lib_adc.d)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -217,5 +217,5 @@ I (C:\Users\mendicino\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
 I (C:\Users\mendicino\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (adc\adc.h)(0x63BDDBD4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (adc\../defines/defines.h)(0x63C0478D)
+I (adc\../defines/defines.h)(0x63DFE15A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602585EC)

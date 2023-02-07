@@ -172,7 +172,7 @@ void TIMER_reset( uint8_t timer_num )
  * @param MatchReg match register
  * @param SRImatchReg match register staus, configurable using the CONTROL_* macros
  * @param TimerInterval match register value, every "value" that the timer clock reaches an interrupt is thrown
- * @param add_TC when initializing the TimerInterval add the current value of the TC and keep adding the initial value to the MR
+ * @param add_TC when initializing the TimerInterval, add the current value of the TC and keep adding the initial value to the MR
  */
 void TIMER_match_reg(uint8_t timer_num, uint8_t MatchReg, uint8_t SRImatchReg, uint32_t TimerInterval, bool add_TC)
 {

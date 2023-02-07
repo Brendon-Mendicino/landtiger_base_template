@@ -27,6 +27,9 @@
 #define J_LEFT          (4)
 
 
+// Control structure for joystick directions
+// - enab: if the direction is currently enbled (pressed)
+// - runned: if the direction priviously runned the associated callback
 typedef struct joystick_enab_t {
 	bool sel_enab    :1;
 	bool sel_runned  :1;
@@ -42,7 +45,6 @@ typedef struct joystick_enab_t {
 
 
 
-/* lib_joystick */
 
 void JOY_init(bool single_press);
 

@@ -38,6 +38,15 @@
 extern uint8_t ScaleFlag; // <- ScaleFlag needs to visible in order for the emulator to find the symbol (can be placed also inside system_LPC17xx.h but since it is RO, it needs more work)
 #endif
 
+
+typedef struct state_t {
+	int32_t test;
+} state_t;
+
+state_t state = {0};
+
+
+
 int main(void)
 {
 	SystemInit(); /* System Initialization (i.e., PLL)  */

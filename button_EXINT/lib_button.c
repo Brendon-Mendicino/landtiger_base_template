@@ -10,6 +10,8 @@ static uint8_t debounce_timer = 0;
 
 /**
  * @brief  Function that initializes all Buttons
+ * 
+ * @param pririty pririty of the button interrupts
  */
 void BUTTON_init(uint32_t priority)
 {
@@ -91,6 +93,7 @@ void BUTTON_enable_debouncing(uint8_t timer, uint8_t button)
 			return;
 	}
 	
+	// when the time expires enable the button if it's not pressed
 	debounce_timer = timer;
 	TIMER_match_reg(timer, match, CONTROL_INTERRUPT, time_interval, true);
 	TIMER_set_callable(timer, match, callable);

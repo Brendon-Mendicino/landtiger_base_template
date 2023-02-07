@@ -74,7 +74,7 @@ void check_for_joystick_pressed(joystick_enab_t *j_state)
 
 
 /**
- * @brief Check if a direction has to run a "callable" and if it doues runs it.
+ * @brief Check if a direction has to run the associated "callable" and if it does runs it.
  * Works best if used in a timer loop.
  * 
  */
@@ -128,9 +128,9 @@ void JOY_run_directions(void)
 	}
 
 	/* J_DOWN */
-	if (j_state.down_enab && (!j_state.sel_runned || !single_press))
+	if (j_state.down_enab && (!j_state.down_runned || !single_press))
 	{
-		j_state.sel_runned = true;
+		j_state.down_runned = true;
 
 		if ((callable = JOY_get_callable(J_DOWN)) != NULL) {
 			callable();

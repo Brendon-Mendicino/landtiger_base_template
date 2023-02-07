@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\sample.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\sample.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Jan 12 18:50:40 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Feb 05 18:37:19 2023
 <BR><P>
-<H3>Maximum Stack Usage =         52 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         64 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 EINT0_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
 <P>
@@ -199,8 +199,8 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[3a]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; SystemInit
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; exit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -374,28 +374,26 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, sample.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = main &rArr; SystemInit
-</UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+<P><STRONG><a name="[3b]"></a>main</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, sample.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[2a]"></a>RIT_IRQHandler</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, irq_rit.o(.text))
+<P><STRONG><a name="[2a]"></a>RIT_IRQHandler</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, irq_rit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RIT_IRQHandler
 </UL>
 <BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RIT_get_callable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[7d]"></a>RIT_enable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
+<P><STRONG><a name="[7d]"></a>RIT_enable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
 
-<P><STRONG><a name="[7e]"></a>RIT_disable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
+<P><STRONG><a name="[7e]"></a>RIT_disable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
 
 <P><STRONG><a name="[7f]"></a>RIT_reset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
 
-<P><STRONG><a name="[80]"></a>RIT_init</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
+<P><STRONG><a name="[80]"></a>RIT_init</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, lib_rit.o(.text), UNUSED)
 
 <P><STRONG><a name="[81]"></a>RIT_set_callable</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_rit.o(.text), UNUSED)
 
@@ -403,48 +401,28 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RIT_IRQHandler
 </UL>
 
-<P><STRONG><a name="[1f]"></a>EINT0_IRQHandler</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, irq_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = EINT0_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
-</UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
-</UL>
-<P><STRONG><a name="[20]"></a>EINT1_IRQHandler</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, irq_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = EINT1_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
-</UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
-</UL>
-<P><STRONG><a name="[21]"></a>EINT2_IRQHandler</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, irq_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = EINT2_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
-</UL>
-<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
-</UL>
-<P><STRONG><a name="[23]"></a>ADC_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, irq_adc.o(.text))
+<P><STRONG><a name="[23]"></a>ADC_IRQHandler</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, irq_adc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_get_consumer
+<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_get_consumer
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[41]"></a>SystemInit</STRONG> (Thumb, 370 bytes, Stack size 20 bytes, system_lpc17xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SystemInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[82]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[83]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[84]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+
+<P><STRONG><a name="[41]"></a>SystemInit</STRONG> (Thumb, 552 bytes, Stack size 0 bytes, system_lpc17xx.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[46]"></a>run_mr</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, irq_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = run_mr
+<P><STRONG><a name="[44]"></a>run_mr</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, irq_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = run_mr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_get_match_reg_update_val
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_get_callable
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_get_match_reg_update_val
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_get_callable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER3_IRQHandler
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER2_IRQHandler
@@ -452,140 +430,164 @@ Global Symbols
 <LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[e]"></a>TIMER0_IRQHandler</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, irq_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIMER0_IRQHandler &rArr; run_mr
+<P><STRONG><a name="[e]"></a>TIMER0_IRQHandler</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, irq_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIMER0_IRQHandler &rArr; run_mr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
-</UL>
-<P><STRONG><a name="[f]"></a>TIMER1_IRQHandler</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, irq_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIMER1_IRQHandler &rArr; run_mr
-</UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[10]"></a>TIMER2_IRQHandler</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, irq_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIMER2_IRQHandler &rArr; run_mr
+<P><STRONG><a name="[f]"></a>TIMER1_IRQHandler</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, irq_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIMER1_IRQHandler &rArr; run_mr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
-</UL>
-<P><STRONG><a name="[11]"></a>TIMER3_IRQHandler</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, irq_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIMER3_IRQHandler &rArr; run_mr
-</UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[49]"></a>TIMER_init</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, lib_timer.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
+<P><STRONG><a name="[10]"></a>TIMER2_IRQHandler</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, irq_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIMER2_IRQHandler &rArr; run_mr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[11]"></a>TIMER3_IRQHandler</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, irq_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = TIMER3_IRQHandler &rArr; run_mr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[47]"></a>TIMER_init</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, lib_timer.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 </UL>
 
-<P><STRONG><a name="[82]"></a>TIMER_enable</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
+<P><STRONG><a name="[85]"></a>TIMER_enable</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
 
-<P><STRONG><a name="[83]"></a>TIMER_disable</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
+<P><STRONG><a name="[86]"></a>TIMER_disable</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
 
-<P><STRONG><a name="[84]"></a>TIMER_reset</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
+<P><STRONG><a name="[87]"></a>TIMER_reset</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
 
-<P><STRONG><a name="[4d]"></a>TIMER_match_reg</STRONG> (Thumb, 130 bytes, Stack size 20 bytes, lib_timer.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIMER_match_reg
+<P><STRONG><a name="[4b]"></a>TIMER_match_reg</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, lib_timer.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = TIMER_match_reg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_disable_debouncing
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2_callable
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key1_callable
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int0_callable
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg_millis
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg_millis
 </UL>
 
-<P><STRONG><a name="[4c]"></a>TIMER_match_reg_millis</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, lib_timer.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+<P><STRONG><a name="[4a]"></a>TIMER_match_reg_millis</STRONG> (Thumb, 44 bytes, Stack size 32 bytes, lib_timer.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
 </UL>
 
-<P><STRONG><a name="[54]"></a>TIMER_set_callable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_timer.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
+<P><STRONG><a name="[54]"></a>TIMER_set_callable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib_timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
 </UL>
 
-<P><STRONG><a name="[48]"></a>TIMER_get_callable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_timer.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+<P><STRONG><a name="[46]"></a>TIMER_get_callable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
 </UL>
 
-<P><STRONG><a name="[47]"></a>TIMER_get_match_reg_update_val</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib_timer.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
+<P><STRONG><a name="[45]"></a>TIMER_get_match_reg_update_val</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_timer.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;run_mr
 </UL>
 
-<P><STRONG><a name="[4e]"></a>BUTTON_init</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, lib_button.o(.text), UNUSED)
+<P><STRONG><a name="[1f]"></a>EINT0_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, irq_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = EINT0_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[20]"></a>EINT1_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, irq_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = EINT1_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[21]"></a>EINT2_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, irq_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = EINT2_IRQHandler &rArr; BUTTON_enable_debouncing &rArr; TIMER_match_reg
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_get_on_click_listener
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_enable_debouncing
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
+</UL>
+<P><STRONG><a name="[4e]"></a>BUTTON_init</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, lib_button.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 </UL>
 
-<P><STRONG><a name="[51]"></a>int0_callable</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, lib_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = int0_callable &rArr; TIMER_match_reg
+<P><STRONG><a name="[51]"></a>int0_callable</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lib_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = int0_callable &rArr; TIMER_match_reg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> lib_button.o(.text)
-</UL>
-<P><STRONG><a name="[52]"></a>key1_callable</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, lib_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = key1_callable &rArr; TIMER_match_reg
-</UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lib_button.o(.text)
 </UL>
-<P><STRONG><a name="[53]"></a>key2_callable</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, lib_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = key2_callable &rArr; TIMER_match_reg
+<P><STRONG><a name="[52]"></a>key1_callable</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lib_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = key1_callable &rArr; TIMER_match_reg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lib_button.o(.text)
 </UL>
-<P><STRONG><a name="[43]"></a>BUTTON_enable_debouncing</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, lib_button.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BUTTON_enable_debouncing &rArr; TIMER_match_reg
+<P><STRONG><a name="[53]"></a>key2_callable</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, lib_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = key2_callable &rArr; TIMER_match_reg
+</UL>
+<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lib_button.o(.text)
+</UL>
+<P><STRONG><a name="[4c]"></a>BUTTON_enable_debouncing</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, lib_button.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BUTTON_enable_debouncing &rArr; TIMER_match_reg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_set_callable
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT2_IRQHandler
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT1_IRQHandler
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[55]"></a>BUTTON_disable_debouncing</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, lib_button.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
+<P><STRONG><a name="[55]"></a>BUTTON_disable_debouncing</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, lib_button.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_match_reg
 </UL>
 
-<P><STRONG><a name="[85]"></a>BUTTON_set_on_click_listener</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_button.o(.text), UNUSED)
+<P><STRONG><a name="[88]"></a>BUTTON_set_on_click_listener</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_button.o(.text), UNUSED)
 
-<P><STRONG><a name="[44]"></a>BUTTON_get_on_click_listener</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_button.o(.text))
+<P><STRONG><a name="[4d]"></a>BUTTON_get_on_click_listener</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lib_button.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT2_IRQHandler
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT1_IRQHandler
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[86]"></a>ADC_init</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
+<P><STRONG><a name="[89]"></a>ADC_init</STRONG> (Thumb, 114 bytes, Stack size 12 bytes, lib_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[87]"></a>DAC_init</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
+<P><STRONG><a name="[8a]"></a>DAC_init</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[88]"></a>DAC_set_output</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
+<P><STRONG><a name="[8b]"></a>DAC_set_output</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[89]"></a>ADC_start_conversion</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
+<P><STRONG><a name="[8c]"></a>ADC_start_conversion</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[8a]"></a>ADC_set_consumer</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
+<P><STRONG><a name="[8d]"></a>ADC_set_consumer</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_adc.o(.text), UNUSED)
 
-<P><STRONG><a name="[45]"></a>ADC_get_consumer</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_adc.o(.text))
+<P><STRONG><a name="[43]"></a>ADC_get_consumer</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib_adc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8b]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[8e]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[8c]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[8f]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[8d]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[90]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[37]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -606,40 +608,34 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[8e]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[91]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[56]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[8f]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[92]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[40]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
-
-<P><STRONG><a name="[90]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[91]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
-
-<P><STRONG><a name="[92]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[4a]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_init
+<P><STRONG><a name="[48]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_init
 </UL>
 
-<P><STRONG><a name="[4b]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, lib_timer.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_init
+<P><STRONG><a name="[49]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, lib_timer.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_init
 </UL>
 
-<P><STRONG><a name="[4f]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, lib_button.o(.text), UNUSED)
+<P><STRONG><a name="[4f]"></a>__NVIC_EnableIRQ</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, lib_button.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_init
 </UL>
 
-<P><STRONG><a name="[50]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, lib_button.o(.text), UNUSED)
+<P><STRONG><a name="[50]"></a>__NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, lib_button.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BUTTON_init
 </UL>
 <P>
